@@ -1,16 +1,18 @@
 spring:
   jpa:
-    database: mysql
-    hibernate.ddl-auto: update
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MariaDBDialect
     show-sql: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3309/ojt?serverTimezone=Asia/Seoul
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.35.232/ojt
     username: rms
     password: rms210601!
 
-  sql:
-    init:
-      mode: always
 
