@@ -1,7 +1,7 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database-platform: org.hibernate.dialect.MariaDBDialect
     show-sql: true
     properties:
@@ -11,7 +11,7 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://192.168.35.232/ojt
+    url: jdbc:mariadb://192.168.35.232:3309/ojt
     username: rms
     password: rms210601!
 

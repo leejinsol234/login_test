@@ -22,6 +22,11 @@ public class ViewController {
 	@Autowired
 	private MemberRepository repository;
 	
+	@GetMapping("/")
+	public String showVuePage() {
+		return "/index.html";
+	}
+	
 	@GetMapping("/login")
 	public String loginPage() {
 		return "login";
